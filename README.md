@@ -1,4 +1,4 @@
-# ![Scale-Up Velocity](./readme-files/logo-main.png) Final 1 - URL shortner 📎
+# ![Scale-Up Velocity](./readme-files/logo-main.png) Final 1 - URL shortener 📎
 
 In this project you will create your own [URL shortener](https://en.wikipedia.org/wiki/URL_shortening)!
 
@@ -15,17 +15,9 @@ This repository includes a basic template for starting the project:
 - Before submitting, create a pull request from the development branch into the main branch. **Leave the PR open and do not merge the branches**. The open PR will be used to review and mark your code
 - Good Luck! 🤘
 
-## Testing your project
-
-In this assignment, you will have to create your own tests, as learned in class. Your grade will be calculated by your test coverage.
-
-Optionally, You can create a github [action](https://docs.github.com/en/actions) that runs your tests on each commit:
-
-![Commits test](./readme-files/commit-tests.png)
-
 ## Guidelines
 
-- Create a route `/api/shorturl/` in your `express` app that will handle all url shortening requests. (We recommend using [express Router](https://expressjs.com/en/guide/routing.html))
+- Create a route `/api/shortUrl/` in your `express` app that will handle all url shortening requests. (We recommend using [express Router](https://expressjs.com/en/guide/routing.html))
 
 - Write/read **Asynchronously** a single JSON file as your DB
 
@@ -39,24 +31,20 @@ Optionally, You can create a github [action](https://docs.github.com/en/actions)
 
 - Use a `class DataBase{}` to read/write (**Asynchronously**) all data in your back-end (you can use a json file as persistent layer)
 
-- Add another functionality to your service: a statistics route (`api/statistic/:shorturl-id`) that will respond with the following data per `shorturl-id`:
+- Add another functionality to your service: a statistics route (`api/statistic/:shortUrl-id`) that will respond with the following data per `shortUrl-id`:
+
   - `creationDate` - a SQLDate format
   - `redirectCount` - the amount of times this url was used for redirection
   - `originalUrl`
-  - `shorturl-id`
-
-- Fully test your `express` app with `jest` and `supertest`. Test each end point response **including** error responses.
-
-  Use a separate DB file for your tests. _Hint: use [Environment variables](https://jestjs.io/docs/en/environment-variables)_
+  - `shortUrl-id`
 
 ## Bonus
 
 - Add any feature you desire. Some ideas worth extra points:
-  - Custom short URL. Support optional `shorturl-id` parameter in your `POST` request. Pay attention to error handling.
+  - Custom short URL. Support optional `shortUrl-id` parameter in your `POST` request. Pay attention to error handling.
   - Serve a styled statistics dashboard instead of the default JSON statistics
-  - Use the [`JSONBIN.io`](https://jsonbin.io/) service bin as your persistent layer in your back-end DB class (use CRUD operations to read write bins)
+  - Use the [`jsonBin.io`](https://jsonbin.io/) service bin as your persistent layer in your back-end DB class (use CRUD operations to read write bins)
   - Try implementing user management
-- Use supertest/puppeteer test to test any bonus feature you implemented
 
 **Add an explanation in `README.md` for each bonus feature you add and a link to any resource you used**
 
@@ -70,6 +58,7 @@ Optionally, You can create a github [action](https://docs.github.com/en/actions)
 - Git usage: meaningful commit messages, small commits, folder and file structures, README file, issues, etc...
 
 ## Submitting
+
 - Submit your solution repo link - an open PR from your dev branch to the main one
 - Your readme should have a [`repl.it`](https://repl.it/) link with your solutions.
 - Submit a link to your repo to the CRM.
