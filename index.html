@@ -22,13 +22,24 @@
             <legend>Enter your URL here and get shortened one!</legend>
             <label for="url_input">URL:</label>
             <input id="url_input" type="text" placeholder="paste here..." />
-            <input id="submit button" type="button" value="shorten⇶" />
+            <input id="submit original" type="button" value="shorten⇶" />
           </fieldset>
         </form>
       </section>
       <section>
         <legend>your new URL is:</legend>
         <p id="new URL"></p>
+      </section>
+      <section>
+        <legend>paste shortened URL to see its stats</legend>
+        <label for="stats input">shortened here:</label>
+        <input id="stats input" type="text" placeholder="paste here..." />
+        <input
+          id="submit to show stats"
+          type="button"
+          value="click to see stats"
+        />
+        <div id="info area"></div>
       </section>
     </main>
     <footer>
