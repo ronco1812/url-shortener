@@ -9,7 +9,10 @@ const server = "http://localhost:3000";
 const shortener = async () => {
   const urlToChange = urlInput.value;
   if (!urlToChange) return;
-  const response = await axios.get(`${server}/shorten/?url=${urlToChange}`);
+  const response = await axios.post(
+    `${server}/shorten`,
+    JSON.stringify(urlToChange)
+  );
   const newId = response.data;
   urlInput.value = "";
   resultArea.innerText = `${server}/original/${newId}`;
