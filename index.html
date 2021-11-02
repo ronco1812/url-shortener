@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>URL Shortener</title>
+    <title>Carmel`s URL Shortener</title>
     <link rel="icon" type="image/png" href="./public/favicon.ico" />
     <link href="./public/style.css" rel="stylesheet" type="text/css" />
     <link
@@ -19,21 +19,28 @@
       <section>
         <form action="api/shorturl/new" method="POST">
           <fieldset>
-            <legend>URL Shortener</legend>
+            <legend>Enter your URL here and get shortened one!</legend>
             <label for="url_input">URL:</label>
-            <input
-              id="url_input"
-              type="text"
-              name="url"
-              placeholder="https://www.freecodecamp.org/"
-            />
-            <input type="submit" value="POST URL" />
+            <input id="url_input" type="text" placeholder="paste here..." />
+            <input id="submit button" type="button" value="shorten⇶" />
           </fieldset>
         </form>
       </section>
+      <section>
+        <legend>your new URL is:</legend>
+        <p id="new URL"></p>
+      </section>
     </main>
     <footer>
-      <p>By <a href="https://www.freecodecamp.org/">freeCodeCamp</a></p>
+      <p>
+        By
+        <a href="https://github.com/11carmel11">
+          <strong> carmel cohen</strong></a
+        >
+      </p>
     </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script src="./index.js" defer></script>
   </body>
 </html>

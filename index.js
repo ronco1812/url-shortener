@@ -1,18 +1,12 @@
-const express = require("express");
-const cors = require("cors");
-const app = express();
-const PORT = process.env.PORT || 3000;
-app.use(cors());
-const path = require("path");
+const urlInput = document.getElementById("url_input");
+const submitButton = document.getElementById("submit button");
+const resultArea = document.getElementById("new URL");
+const server = "http://localhost:3000";
 
-app.use("/public", express.static(`./public`));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.resolve("./index.html"));
-});
-
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-});
-
-module.exports = app;
+const shortener = async () => {
+  if (!urlInput.value) return;
+  const response = await axios.get(`${server}/shorten/${urlInput.value}`);
+  const newId = response.data;
+  resultArea.innerText = `${server}/original/${newId}`;
+};
+submitButton.addEventListener("click", shortener);
