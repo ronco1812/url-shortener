@@ -1,4 +1,4 @@
-# ![Scale-Up Velocity](./readme-files/logo-main.png) Final 1 - URL shortener 📎
+# ![Scale-Up Velocity](./logo-main.png) Final 1 - URL shortener 📎
 
 In this project you will create your own [URL shortener](https://en.wikipedia.org/wiki/URL_shortening)!
 
