@@ -4,8 +4,9 @@ const resultArea = document.getElementById("new URL");
 const server = "http://localhost:3000";
 
 const shortener = async () => {
-  if (!urlInput.value) return;
-  const response = await axios.get(`${server}/shorten/${urlInput.value}`);
+  const urlToChange = urlInput.value;
+  if (!urlToChange) return;
+  const response = await axios.get(`${server}/shorten/?url=${urlToChange}`);
   const newId = response.data;
   resultArea.innerText = `${server}/original/${newId}`;
 };

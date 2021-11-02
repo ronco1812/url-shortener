@@ -4,6 +4,7 @@ const app = express();
 app.use(cors());
 const PORT = process.env.PORT || 3000;
 const shortenRouter = require("./routers/shortUrl/shortenRouter");
+const extendRouter = require("./routers/extendUrl/extendRouter");
 const path = require("path");
 // app.use("/public", express.static(`./public`));
 // app.get("/", (req, res) => {
@@ -11,6 +12,7 @@ const path = require("path");
 // });
 
 app.use("/shorten", shortenRouter);
+app.use("/original", extendRouter);
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);

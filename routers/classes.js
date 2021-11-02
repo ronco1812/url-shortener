@@ -13,21 +13,23 @@ class Database {
     }
     this.creationDate = convertDateToSqlFormat();
     this.redirectCount = 0;
-    const data = fs.readFileSync(path.resolve(__dirname, "data.json"));
-    const saved = JSON.parse(data);
+    const data = fs.readFileSync(path.resolve(__dirname, "database.json"));
+    const savedContent = JSON.parse(data);
     const id = this.shortUrl_id;
-    saved[id] = {
+    savedContent[id] = {
       URL: this.originalUrl,
       counter: this.redirectCount,
       creationDate: this.creationDate,
     };
-    fs.rmSync(path.resolve(__dirname, "./data.json"));
-    fs.appendFile("./routers/data.json", JSON.stringify(saved), (err) => {
-      if (err) throw err.message;
-    });
+    fs.rmSync(path.resolve(__dirname, "./database.json"));
+    fs.appendFile(
+      "./routers/database.json",
+      JSON.stringify(savedContent),
+      (err) => {
+        if (err) throw err.message;
+      }
+    );
   }
-
-  //   redirect() {}
 }
 
 module.exports = Database;

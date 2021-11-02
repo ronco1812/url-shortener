@@ -1,10 +1,9 @@
 const express = require("express");
-const Database = require("../database");
+const Database = require("../classes");
 const router = express.Router();
-router.get("/:url", (req, res) => {
-  const { url } = req.params;
+router.get("/", (req, res) => {
+  const { url } = req.query;
   const shortUrl = new Database(url);
   res.send(shortUrl.shortUrl_id);
-  res.send("h");
 });
 module.exports = router;
