@@ -16,7 +16,7 @@ const shortener = async () => {
     );
     const { shortUrl_id } = response.data;
     urlInput.value = "";
-    resultArea.innerText = `http://localhost:3000/original/${shortUrl_id}`;
+    resultArea.innerText = `https://tranquil-hamlet-60313.herokuapp.com/original/${shortUrl_id}`;
   } catch (error) {
     alert("oops, something went wrong...");
   }
