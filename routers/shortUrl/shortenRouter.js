@@ -5,7 +5,7 @@ router.post("/", (req, res) => {
   req.on("data", (data) => {
     const url = JSON.parse(data);
     const shortUrl = new Database(url);
-    res.send(shortUrl.shortUrl_id);
+    res.send(shortUrl);
   });
 });
 module.exports = router;

@@ -1,13 +1,15 @@
 const express = require("express");
-const fs = require("fs");
-const path = require("path");
+const Database = require("../classes");
 const router = express.Router();
 
 router.get("/:hash", (req, res) => {
-  const { hash } = req.params;
-  const data = fs.readFileSync(path.resolve(__dirname, "../database.json"));
-  const savedContent = JSON.parse(data);
-  res.json(savedContent[hash]);
+  try {
+    const { hash } = req.params;
+    const stats = Database.getStats(hash);
+    res.json(stats);
+  } catch (error) {
+    res.status(404).send("page not found");
+  }
 });
 
 module.exports = router;
