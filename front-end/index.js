@@ -4,7 +4,7 @@ const resultArea = document.getElementById("new URL");
 const statsInput = document.getElementById("stats input");
 const showStatsButton = document.getElementById("submit to show stats");
 const infoDiv = document.getElementById("info area");
-const server = "http://localhost:3000/";
+const server = "/";
 
 const shortener = async () => {
   try {
