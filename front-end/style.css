@@ -1,8 +1,8 @@
-body {
+#body {
+  background-color: black;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: #222;
-  background-color: #fff;
+  color: white;
   text-align: center;
   line-height: 1.4em;
 }
@@ -41,4 +41,25 @@ input {
 input[type="text"] {
   width: 220px;
   text-align: center;
+}
+#infoUrl{
+  border: cadetblue;
+  border-radius: 50px;
+  background-color: darkred;
+  margin-left: 25vw;
+  margin-right: 25vw;
+}
+#newUrl{
+  border: cadetblue;
+  border-radius: 50px;
+  background-color: darkred;
+  margin-left: 25vw;
+  margin-right: 25vw;
+}
+legend{
+  color: white;
+}
+input[type="button"]{
+  background-color: blue;
+  color: aqua;
 }
